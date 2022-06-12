@@ -1,0 +1,5 @@
+node_modules
+public/compiled
+server/fileChanges.txt
+productionProject
+package-lock.json

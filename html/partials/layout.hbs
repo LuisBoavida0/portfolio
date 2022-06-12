@@ -1,0 +1,14 @@
+{{! Instead of using head and body, you will need to use x-head and x-body}}
+{{! If you want to import a script here (you should import on the js files), you will need to use instead x-script}}
+<x-head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>{{pageTitle}}</title>
+    {{! Even though we are using scss you need to import it like this}}
+    <link rel='stylesheet' href='common.css'>
+</x-head>
+<x-body>
+    {{! Say where the content will be loaded, to learn handlebars go to this website https://handlebarsjs.com/}}
+    {{> @partial-block }}
+</x-body>
