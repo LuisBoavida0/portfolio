@@ -122,9 +122,32 @@ body {
 
     .progress-bar {
         transition: all ease-in-out 1s;
-        transition-delay: 2s;
         transition-property: width;
-        width: 100%;
+        transition-delay: 1s;
+        width: 0%;
+    }
+    &.show .w-90-progress {
+        width: 90%;
+    }
+
+    &.show .w-85-progress {
+        width: 85%;
+    }
+
+    &.show .w-70-progress {
+        width: 70%;
+    }
+
+    &.show .w-65-progress {
+        width: 65%;
+    }
+    
+    &.show .w-50-progress {
+        width: 50%;
+    }
+
+    &.show .w-30-progress {
+        width: 30%;
     }
     /*&.next {
         transform: scale(2) translate(0px, 0px);
