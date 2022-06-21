@@ -1,0 +1,11 @@
+<div style="display: none;" class='content' elemId="contentMyWork">
+  {{#each myWork}}
+  <h1>{{this.projectName}}</h1>
+  <video width="320" height="240" controls>
+    <source src="videos/{{this.video}}" type="video/mp4">
+    Video not supported
+  </video>
+  <p>{{this.description}}</p>
+  {{/each}}
+  <button elemId="returnMyWorkBtn">Return</button>
+</div>

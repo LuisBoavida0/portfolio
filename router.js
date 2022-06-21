@@ -1,10 +1,26 @@
 export const routes = { //Routes
     '/': {
         template: 'html/home.hbs',
-        partials: ['layout', 'header'], //The default path for partials is html/partials
+        partials: ['layout', 'header', 'aboutMe', 'myWork', 'contacts'], //The default path for partials is html/partials
         startValues: {
             pageTitle: "Home",
-            myWork: ["work1", "work2", "work3"]
+            myWork: [ 
+                {
+                    projectName: "work1",
+                    video: "testeVideo.mp4",
+                    description: "Descrição \n DEU!!!"
+                }, 
+                {
+                    projectName: "work2",
+                    video: "testeVideo.mp4",
+                    description: "Descrição \n DEU!!!"
+                }, 
+                {
+                    projectName: "work3",
+                    video: "testeVideo.mp4",
+                    description: "Descrição \n DEU!!!"
+                }, 
+            ]
         },
         js: 'home.js',
         //js: 'indexTS.ts' //If You are using typescript

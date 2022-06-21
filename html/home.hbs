@@ -6,10 +6,6 @@
 <div class="contents" elemId="contentsDiv">
   <h1>Hello, I am Luis Boavida and I am a full stack developer :)</h1>
   <img src="img/Background.png">
-  <!--<div class='content intro' elemId="introDiv">
-    <button elemId="myWorkBtn">Some of my work</button>
-    <button elemId="contactsBtn">Contacts</button>
-  </div>-->
   <div class='content-holder about-me' elemId="aboutMeDiv">
     <h2>About Me! <strong>v</strong></h2>
   </div>
@@ -21,133 +17,10 @@
   </div>
 </div>
 
-<div style="display: none;" class='content' elemId="contentAboutMe">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>About Me:</h1>
-        <p class="mb-3">Hi, I'm Luis Boavida and I'm studying at Coventry University.<br>
-        I'm a programmer, and this his my portfolio.<br>
-        In here you will be able to see my work as a programmer since I started.<br>
-        You will see some of the works I did when I was in school, Working, and at Coventry University.<br>
-        Here are a few technologies I've been working with recently:</p>
+{{> aboutMe }}
 
-        <div class="row">
-          <div class="col-3 mb-1">HTML5</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-90-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
+{{> myWork }}
 
-          <div class="col-3 mb-1">CSS3</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-90-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">Javascript (ES6+)</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-90-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">NodeJS</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-90-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">DenoJS</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-85-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">Web Apis</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-70-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">Python</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-65-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">React</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-50-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">AngularJS</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-50-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">C# Asp.net</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-50-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">Php</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-50-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-
-          <div class="col-3 mb-1">C++</div>
-          <div class="col-5">
-            <div class="progress">
-              <div class="progress-bar w-30-progress"></div>
-            </div>
-          </div>
-          <div class="col-4 "></div>
-        </div>
-
-        <button class="btn btn-primary mt-3" elemId="returnAboutMeBtn">Return</button>
-      </div>
-    </div>
-  </div>
-</div>
-<div style="display: none;" class='content' elemId="contentMyWork">
-  {{#each myWork}}
-  <p>{{this}}</p>
-  {{/each}}
-  <button elemId="returnMyWorkBtn">Return</button>
-</div>
-<div style="display: none;" class='content' elemId="contentContacts">
-  <h1>Contacts:</h1>
-  <a href="https://www.linkedin.com/in/luis-boavida" target="_blank"><img src="img/linkedin.png" height="100"
-      alt="linkedin"></a>
-  <a href="https://github.com/LuisBoavida0/" target="_blank"><img src="img/github.png" height="100" alt="linkedin"></a>
-  <a href="https://www.npmjs.com/~luisboavida" target="_blank"><img src="img/npm.png" height="100" alt="linkedin"></a>
-  <button elemId="returnContactsBtn">Return</button>
-</div>
+{{> contacts }}
 
 {{/layout}}
