@@ -1,0 +1,23 @@
+//main page on contacts click (to give the zoom)
+.contents.contacts {
+    transform: scale(5) translate(-24%, 6%);
+}
+
+//Main page contacts television css
+.content-holder.contacts {
+    width: 157px;
+    height: 100px;
+    right: 18%;
+    top: 46%;
+    background-image: url(img/tv.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    h2 {
+        top: -58px;
+    }
+}
+
+//contacts page css
+.content.contacts {
+}

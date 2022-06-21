@@ -20,8 +20,4 @@ function returnFromContent(e, target, targetClass) {
     setTimeout(() => { elem.contentsDiv.classList.remove(targetClass) }, 1000)
 }
 
-window.onload = () => {
-    elem.contentAboutMe.style.display = "block"
-    elem.contentMyWork.style.display = "block"
-    elem.contentContacts.style.display = "block"
-}
+import './homeScrollAnimations'

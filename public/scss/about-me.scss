@@ -1,0 +1,53 @@
+//main page on contents click (to give the zoom)
+.contents.about-me {
+    transform: scale(5) translate(18%, 6%);
+}
+
+//Main page about me frame css
+.content-holder.about-me {
+    width: 100px;
+    height: 100px;
+    left: 32%;
+    top: 46%;
+    background-image: url(img/frame.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    h2 {
+        top: -58px;
+    }
+}
+
+//About me page css
+.content.about-me {
+    //Progress bars css
+    .progress-bar {
+        transition: all ease-in-out 1s;
+        transition-property: width;
+        transition-delay: 1s;
+        width: 0%;
+    }
+    &.show .w-90-progress {
+        width: 90%;
+    }
+
+    &.show .w-85-progress {
+        width: 85%;
+    }
+
+    &.show .w-70-progress {
+        width: 70%;
+    }
+
+    &.show .w-65-progress {
+        width: 65%;
+    }
+    
+    &.show .w-50-progress {
+        width: 50%;
+    }
+
+    &.show .w-30-progress {
+        width: 30%;
+    }
+}

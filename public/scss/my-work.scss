@@ -1,0 +1,26 @@
+//main page on my work click (to give the zoom)
+.contents.my-work {
+    transform: scale(5) translate(-3%, -7%);
+}
+
+//Main page my work desk css
+.content-holder.my-work {
+    width: 500px;
+    height: 400px;
+    left: calc(50% + 50px);
+    top: 68%;
+    background-image: url(img/desk.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+//my work page css
+.content.my-work {
+    div {
+        transition: all ease-in-out 1s;
+        transform: scale(0);
+        &.show {
+            transform: scale(1);
+        }
+    }
+}

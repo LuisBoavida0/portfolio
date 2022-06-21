@@ -1,30 +1,12 @@
-startTemplate = {
-}
-
-eventsToUse = [
-]
-
 let currAnimation = -1
-let elementsAnimation = {}
+let elementsAnimation = []
 let readyForTransition = false
+
 window.onload = function () {
-    elementsAnimation = [
-        {
-            elem: elem.contentTeste,
-            class: "show",
-            next: 'next'
-        },
-        {
-            elem: elem.contentTeste2,
-            class: "show",
-            next: 'next'
-        },
-        {
-            elem: elem.contentTeste3,
-            class: "show",
-            next: 'next'
-        },
-    ]
+    elem.contentAboutMe.style.display = "block"
+    elem.contentMyWork.style.display = "block"
+    elem.contentContacts.style.display = "block"
+    elementsAnimation = elem.contentMyWork.children
 
     nextSlide()
     setInterval(() => {
@@ -36,35 +18,23 @@ const nextSlide = () => {
     if (elementsAnimation.length - 1 === currAnimation) return
 
     if (currAnimation > -1) {
-        elementsAnimation[currAnimation].elem.classList.remove(elementsAnimation[currAnimation].class)
-        elementsAnimation[currAnimation].elem.classList.add(elementsAnimation[currAnimation].next)
+        elementsAnimation[currAnimation].classList.remove("show")
+        elementsAnimation[currAnimation].classList.add("next")
     }
     currAnimation += 1
-    elementsAnimation[currAnimation].elem.classList.add(elementsAnimation[currAnimation].class)
+    elementsAnimation[currAnimation].classList.add("show")
 }
 
 const prevSlide = () => {
     if (1 > currAnimation) return
 
-    if (currAnimation > -1) elementsAnimation[currAnimation].elem.classList.remove(elementsAnimation[currAnimation].class)
+    if (currAnimation > -1) elementsAnimation[currAnimation].classList.remove("show")
     currAnimation -= 1
-    elementsAnimation[currAnimation].elem.classList.add(elementsAnimation[currAnimation].class)
-    elementsAnimation[currAnimation].elem.classList.remove(elementsAnimation[currAnimation].next)
-}
-
-const elementShownByScroll = (element, deltaY) => {
-    var hT = element.offsetTop,
-        hH = element.offsetHeight,
-        wH = window.innerHeight,
-        wS = window.scrollY + deltaY;
-    if ((wS > (hT + hH - wH)) && window.scrollY < (hT + hH)) {
-        console.log("scrolledTo")
-    }
+    elementsAnimation[currAnimation].classList.add("show")
+    elementsAnimation[currAnimation].classList.remove("next")
 }
 
 window.onwheel = function (e) {
-    //elementShownByScroll(elem.contentTeste4, e.deltaY)
-
     if (!readyForTransition) return
 
     if (e.deltaY < 0) prevSlide()
