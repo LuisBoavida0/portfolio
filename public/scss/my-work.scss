@@ -16,11 +16,33 @@
 
 //my work page css
 .content.my-work {
-    div {
-        transition: all ease-in-out 1s;
-        transform: scale(0);
-        &.show {
-            transform: scale(1);
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    img {
+        position: sticky;
+        top: 0;
+    }
+
+    .work-info {
+        margin-top: 50vh;
+        margin-bottom: 50vh;
+        div {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            p {
+                transition: all ease-in-out 1s;
+                opacity: 0;
+                white-space: pre-line;
+
+                &.show {
+                    opacity: 1;
+                }
+            }
         }
     }
 }

@@ -20,6 +20,23 @@
 
 //About me page css
 .content.about-me {
+    .skills {
+        padding: 30px;
+        background-color: $secondary-dark;
+        border-radius: 15px;
+        
+        p {
+            text-align: end;
+            width: 180px;
+            margin-bottom: 10px;
+        }
+        .progress {
+            max-width: 100%;
+            width: 500px;
+            margin-left: 20px;
+        }
+    }
+    
     //Progress bars css
     .progress-bar {
         transition: all ease-in-out 1s;

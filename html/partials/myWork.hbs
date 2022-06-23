@@ -1,15 +1,23 @@
 <div style="display: none;" class='content my-work' elemId="contentMyWork">
-  {{#each myWork}}
-    <div>
-      <h1>{{this.projectName}}</h1>
-      <video width="320" height="240" controls>
-        <source src="videos/{{this.video}}" type="video/mp4">
-        Video not supported
-      </video>
-      <p>{{this.description}}</p>
-      {{#if @last}}
-        <button elemId="returnMyWorkBtn">Return</button>
-      {{/if}}
+  <div class="container">
+    <div class="row">
+      <div class="col-6">
+        <img src="img/{{myWork.0.gif}}" alt="work gif" elemId="workGif">
+      </div>
+      <div class="col-6 work-info" elemId="myWorks">
+        {{#each myWork}}
+          <div>
+            <h1>{{this.projectName}}</h1>
+            {{#if @first}}
+              <p class="show">{{this.description}}</p>
+            {{else}}
+              <p>{{this.description}}</p>
+            {{/if}}
+            <input type="hidden" value="{{this.gif}}">
+          </div>
+        {{/each}}
+      </div>
     </div>
-  {{/each}}
+  </div>
+  <button elemId="returnMyWorkBtn">Return</button>
 </div>

@@ -1,44 +1,22 @@
-let currAnimation = -1
 let elementsAnimation = []
-let readyForTransition = false
 
 window.onload = function () {
     elem.contentAboutMe.style.display = "block"
     elem.contentMyWork.style.display = "block"
     elem.contentContacts.style.display = "block"
-    elementsAnimation = elem.contentMyWork.children
-
-    nextSlide()
+    elementsAnimation = elem.myWorks.children
     setInterval(() => {
         readyForTransition = true
     }, 1000);
 }
 
-const nextSlide = () => {
-    if (elementsAnimation.length - 1 === currAnimation) return
-
-    if (currAnimation > -1) {
-        elementsAnimation[currAnimation].classList.remove("show")
-        elementsAnimation[currAnimation].classList.add("next")
-    }
-    currAnimation += 1
-    elementsAnimation[currAnimation].classList.add("show")
-}
-
-const prevSlide = () => {
-    if (1 > currAnimation) return
-
-    if (currAnimation > -1) elementsAnimation[currAnimation].classList.remove("show")
-    currAnimation -= 1
-    elementsAnimation[currAnimation].classList.add("show")
-    elementsAnimation[currAnimation].classList.remove("next")
+function isVisible (ele, e) {
+    const { top, bottom } = ele.getBoundingClientRect();
+    return ( Math.abs(((top + bottom) / 2) - ((window.innerHeight + e.deltaY) / 2)) < 100)
 }
 
 window.onwheel = function (e) {
-    if (!readyForTransition) return
-
-    if (e.deltaY < 0) prevSlide()
-    else nextSlide()
-
-    readyForTransition = false
+    elementsAnimation[elementsAnimation.length - 3].classList.add("bg-primary")
+    if (isVisible(elementsAnimation[elementsAnimation.length - 3], e))
+        console.log("qqqq")
 }

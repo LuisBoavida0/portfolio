@@ -7,19 +7,34 @@ export const routes = { //Routes
             myWork: [ 
                 {
                     projectName: "work1",
-                    video: "testeVideo.mp4",
-                    description: "Descrição \n DEU!!!"
+                    gif: "Gif1.gif",
+                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
                 }, 
                 {
                     projectName: "work2",
-                    video: "testeVideo.mp4",
-                    description: "Descrição \n DEU!!!"
+                    gif: "Gif2.gif",
+                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
                 }, 
                 {
                     projectName: "work3",
-                    video: "testeVideo.mp4",
-                    description: "Descrição \n DEU!!!"
+                    gif: "Gif1.gif",
+                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
                 }, 
+                {
+                    projectName: "work1",
+                    gif: "Gif2.gif",
+                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
+                }, 
+                {
+                    projectName: "work2",
+                    gif: "Gif1.gif",
+                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
+                }, 
+                {
+                    projectName: "work3",
+                    gif: "Gif2.gif",
+                    description: "Descrição \n DEU!!!"
+                }
             ]
         },
         js: 'home.js',
