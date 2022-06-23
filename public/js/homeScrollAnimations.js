@@ -15,8 +15,19 @@ function isVisible (ele, e) {
     return ( Math.abs(((top + bottom) / 2) - ((window.innerHeight + e.deltaY) / 2)) < 100)
 }
 
+let currAnimation = 0
 window.onwheel = function (e) {
-    elementsAnimation[elementsAnimation.length - 3].classList.add("bg-primary")
-    if (isVisible(elementsAnimation[elementsAnimation.length - 3], e))
-        console.log("qqqq")
+    for (let i = 0; i < elementsAnimation.length; i++) {
+        if (currAnimation != i && isVisible(elementsAnimation[i], e)) {
+            var audio = new Audio('img/audio.wav');
+            audio.volume = 0.2;
+            audio.play();
+            elementsAnimation[currAnimation].querySelector('p').classList.remove('show')
+            currAnimation = i
+            elementsAnimation[i].querySelector('p').classList.add('show')
+            console.log(elementsAnimation[i].querySelector('input').value)
+            elem.workGif.src = "img/" + elementsAnimation[i].querySelector('input').value
+            return
+        }
+    }
 }
