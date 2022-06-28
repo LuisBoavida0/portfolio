@@ -4,7 +4,6 @@ startTemplate = {
 eventsToUse = [
     ['aboutMeDiv', 'click', showContent, ["contentAboutMe", "about-me"]],
     ['myWorkDiv', 'click', showContent, ["contentMyWork", "my-work"]],
-    ['contactsDiv', 'click', showContent, ["contentContacts", "contacts"]],
     ['returnAboutMeBtn', 'click', returnFromContent, ["contentAboutMe", "about-me"]],
     ['returnMyWorkBtn', 'click', returnFromContent, ["contentMyWork", "my-work"]],
     ['returnContactsBtn', 'click', returnFromContent, ["contentContacts", "contacts"]]

@@ -3,7 +3,6 @@ let elementsAnimation = []
 window.onload = function () {
     elem.contentAboutMe.style.display = "block"
     elem.contentMyWork.style.display = "block"
-    elem.contentContacts.style.display = "block"
     elementsAnimation = elem.myWorks.children
     setInterval(() => {
         readyForTransition = true

@@ -6,14 +6,25 @@ export const routes = { //Routes
             pageTitle: "Home",
             myWork: [ 
                 {
-                    projectName: "work1",
+                    projectName: "Portal do Avaliador",
                     gif: "Gif1.gif",
-                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
+                    description: `This project i made with a friend of mine in our own free time right after we finished the course.
+
+                    It was for a Worker of a known tech company (Deloitte, portugal).
+                    
+                    He saw our final presentation on the school and offered us this opportunity.
+                    
+                    We finished making the project and sent him, but since i don't have an account here, i can't use the project. Also i think the project has been discontinued.`
                 }, 
                 {
-                    projectName: "work2",
+                    projectName: "LuisSiteConstructor",
                     gif: "Gif2.gif",
-                    description: "Descrição \n DEU!!! \n ASDAS \n adasd"
+                    description: `I made this project in my free time on one of my vacations, i took 2 days to do this.
+
+                    This creates a project by creating and structuring files. It is to create PHP projects without any framework.
+                    
+                    I made this project in 2018/2019.
+                    MELHORAR, FALTA DIZER Q USA SCSS E O VIDEO Q TENHO NA WISH TA DESATUALIZADO`
                 }, 
                 {
                     projectName: "work3",

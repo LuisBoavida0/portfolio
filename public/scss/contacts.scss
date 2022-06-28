@@ -5,19 +5,28 @@
 
 //Main page contacts television css
 .content-holder.contacts {
-    width: 157px;
-    height: 100px;
-    right: 18%;
-    top: 46%;
-    background-image: url(img/tv.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    right: 36%;
+    top: 31%;
 
     h2 {
         top: -58px;
     }
-}
 
-//contacts page css
-.content.contacts {
+    a {
+        position: absolute;
+
+        &.linkedin {
+            left: 0;
+            top: 0;
+        }
+
+        &.github {
+            left: 130px;
+        }
+
+        &.npm {
+            top: 130px;
+            left: 66px;
+        }
+    }
 }
