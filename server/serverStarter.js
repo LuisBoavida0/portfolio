@@ -119,7 +119,9 @@ function compileCSSFiles() { //Function that will compile all the Scss files to 
     let compiledSCSSFiles = {}   //Object to get all files needed in the compiledCSS directory
     indexValues.scss ? scssPath = indexValues.scss : scssPath = 'public/scss' //Get the path to the scss files
 
-    ThroughDirectory(scssPath)  //Get all scss files
+    ThroughDirectoryFiles = {
+      '/common': 'public/scss/common.scss'
+    }
     for (const [key, value] of Object.entries(ThroughDirectoryFiles)) { //Go through each file
       if (wasFileChanged(value, fileChanges.css[value], `${key}.${value.split('.')[1]}`, 'css')) {  //If file was changed, compile it
         console.log(`${key}.${value.split('.')[1]} being compiled`)
