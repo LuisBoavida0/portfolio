@@ -4,6 +4,8 @@ window.onload = function () {
     elem.contentAboutMe.style.display = "block"
     elem.contentMyWork.style.display = "block"
     elementsAnimation = elem.myWorks.children
+
+    elem.workGif.onclick = function() { window.open(elementsAnimation[0].querySelector('input').value, '_blank') }
     setInterval(() => {
         readyForTransition = true
     }, 1000);
@@ -14,8 +16,7 @@ function isVisible (ele, e) {
     return ( Math.abs(((top + bottom) / 2) - ((window.innerHeight + e.deltaY) / 2)) < 100)
 }
 
-let currAnimation = 0
-window.onwheel = function (e) {
+function myWorkScroll(e) {
     for (let i = 0; i < elementsAnimation.length; i++) {
         if (currAnimation != i && isVisible(elementsAnimation[i], e)) {
             var audio = new Audio('img/audio.wav');
@@ -25,8 +26,15 @@ window.onwheel = function (e) {
             currAnimation = i
             elementsAnimation[i].querySelector('p').classList.add('show')
             console.log(elementsAnimation[i].querySelector('input').value)
-            elem.workGif.src = "img/" + elementsAnimation[i].querySelector('input').value
+            elem.workGif.src = elementsAnimation[i].querySelector('input').value
+            elem.workGif.onclick = function() { window.open(elementsAnimation[i].querySelector('input').value, '_blank') }
             return
         }
     }
+}
+
+let currAnimation = 0
+window.onwheel = function (e) {
+    if (currTarget === "contentMyWork")
+        myWorkScroll(e)
 }

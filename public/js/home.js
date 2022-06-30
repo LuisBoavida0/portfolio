@@ -10,6 +10,7 @@ eventsToUse = [
 ]
 
 function showContent(e, target, targetClass) {
+    currTarget = target
     elem.contentsDiv.classList.add(targetClass)
     setTimeout(() => { elem[target].classList.add("show") }, 1000)
 }

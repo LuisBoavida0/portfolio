@@ -1,8 +1,11 @@
 <div style="display: none;" class='content my-work' elemId="contentMyWork">
   <div class="container">
     <div class="row">
+      <div class="col-12">
+        <h1>Here is some of my work:</h1>
+      </div>
       <div class="col-6">
-        <img src="img/{{myWork.0.gif}}" alt="work gif" elemId="workGif">
+        <img src="{{myWork.0.gif}}" alt="work gif" elemId="workGif">
       </div>
       <div class="col-6 work-info" elemId="myWorks">
         {{#each myWork}}
@@ -11,7 +14,11 @@
             {{#if @first}}
               <p class="show">{{this.description}}</p>
             {{else}}
-              <p>{{this.description}}</p>
+              <p>{{{this.description}}}
+                {{#if href}}
+                  <a href="{{href.link}}" target="_blank">{{href.title}}</a>
+                {{/if}}
+              </p>
             {{/if}}
             <input type="hidden" value="{{this.gif}}">
           </div>
