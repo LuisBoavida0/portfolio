@@ -11,14 +11,14 @@ window.onload = function () {
     }, 1000);
 }
 
-function isVisible (ele, e) {
+function isVisible (ele, deltaY) {
     const { top, bottom } = ele.getBoundingClientRect();
-    return ( Math.abs(((top + bottom) / 2) - ((window.innerHeight + e.deltaY) / 2)) < 100)
+    return ( Math.abs(((top + bottom) / 2) - ((window.innerHeight + deltaY) / 2)) < 100)
 }
 
-function myWorkScroll(e) {
+function myWorkScroll(deltaY) {
     for (let i = 0; i < elementsAnimation.length; i++) {
-        if (currAnimation != i && isVisible(elementsAnimation[i], e)) {
+        if (currAnimation != i && isVisible(elementsAnimation[i], deltaY)) {
             var audio = new Audio('img/audio.wav');
             audio.volume = 0.2;
             audio.play();
@@ -36,5 +36,15 @@ function myWorkScroll(e) {
 let currAnimation = 0
 window.onwheel = function (e) {
     if (currTarget === "contentMyWork")
-        myWorkScroll(e)
+        myWorkScroll(e.deltaY)
+}
+
+let startTouch = 0
+window.ontouchstart = function (e) { startTouch = e.touches[0].pageY }
+
+window.ontouchmove = function (e) {
+    const deltaYMobile = startTouch - e.touches[0].pageY
+
+    if (currTarget === "contentMyWork")
+        myWorkScroll(deltaYMobile)
 }
