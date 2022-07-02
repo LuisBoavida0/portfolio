@@ -9,8 +9,13 @@ eventsToUse = [
     ['returnContactsBtn', 'click', returnFromContent, ["contentContacts", "contacts"]]
 ]
 
+let myWorkInterval = null
 function showContent(e, target, targetClass) {
-    currTarget = target
+    if (target === "contentMyWork")
+        myWorkInterval = setInterval(myWorkScroll, 1)
+    else
+        clearInterval(myWorkInterval)
+
     elem.contentsDiv.classList.add(targetClass)
     setTimeout(() => { elem[target].classList.add("show") }, 1000)
 }
