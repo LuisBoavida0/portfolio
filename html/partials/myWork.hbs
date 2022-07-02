@@ -12,7 +12,11 @@
           <div>
             <h1>{{this.projectName}}</h1>
             {{#if @first}}
-              <p class="show">{{this.description}}</p>
+              <p class="show">{{{this.description}}}
+                {{#if href}}
+                  <a href="{{href.link}}" target="_blank">{{href.title}}</a>
+                {{/if}}
+              </p>
             {{else}}
               <p>{{{this.description}}}
                 {{#if href}}
