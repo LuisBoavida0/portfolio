@@ -34,23 +34,3 @@ myWorkScroll = () => {
 }
 
 let currAnimation = 0
-/*window.onwheel = function (e) {
-    if (currTarget === "contentMyWork")
-        myWorkScroll(e.deltaY)
-}
-
-let startTouch = 0
-window.ontouchstart = function (e) { startTouch = e.touches[0].pageY }
-
-window.ontouchmove = function (e) {
-    const deltaYMobile = startTouch - e.touches[0].pageY
-
-    if (currTarget === "contentMyWork")
-        myWorkScroll(deltaYMobile)
-}*/
-
-/*let currAnimation = 0
-setInterval(function() {
-    if (currTarget === "contentMyWork")
-        myWorkScroll(0)
-}, 1000);*/

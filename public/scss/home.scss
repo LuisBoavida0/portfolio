@@ -4,7 +4,7 @@
 
 //main page parent div
 .contents {
-    transition: all ease-in-out 1s;
+    transition: all ease-in-out 2s;
     transform-style: preserve-3d;
     height: 100vh;
 
@@ -71,7 +71,6 @@
     width: 100vw; 
     height: 100vh;
     top: 0;
-    left: 0;
     padding: 50px;
     background-color: $secondary;
     transform: scale(0);
@@ -80,7 +79,6 @@
     
     &.show {
         transform: scale(1);
-        z-index: 1;
     }
 }
 

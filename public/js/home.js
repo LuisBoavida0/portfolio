@@ -11,11 +11,11 @@ eventsToUse = [
 
 let myWorkInterval = null
 function showContent(e, target, targetClass) {
-    if (target === "contentMyWork") setTimeout(function(){ myWorkInterval = setInterval(myWorkScroll, 1) }, 1500)
+    if (target === "contentMyWork") setTimeout(function(){ myWorkInterval = setInterval(myWorkScroll, 1) }, 2500)
     else clearInterval(myWorkInterval)
 
     elem.contentsDiv.classList.add(targetClass)
-    setTimeout(() => { elem[target].classList.add("show") }, 1000)
+    setTimeout(() => { elem[target].classList.add("show") }, 2000)
 }
 
 function returnFromContent(e, target, targetClass) {

@@ -1,17 +1,13 @@
 //main page on contacts click (to give the zoom)
-.contents.contacts {
+/*.contents.contacts {
     transform: scale(5) translate(-24%, 6%);
-}
+}*/
 
 //Main page contacts television css
 .content-holder.contacts {
     right: 27%;
     top: 31%;
     transform: rotateY(180deg);
-
-    h2 {
-        top: -58px;
-    }
 
     a {
         position: absolute;
