@@ -5,8 +5,9 @@
 
 //Main page contacts television css
 .content-holder.contacts {
-    right: 36%;
+    right: 27%;
     top: 31%;
+    transform: rotateY(180deg);
 
     h2 {
         top: -58px;

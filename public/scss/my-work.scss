@@ -5,23 +5,17 @@
 
 //Main page my work desk css
 .content-holder.my-work {
-    width: 500px;
-    height: 400px;
-    left: calc(50% + 50px);
-    top: 68%;
-    background-image: url(img/desk.png);
-    background-repeat: no-repeat;
-    background-size: contain;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    h2 {
+        margin-bottom: -30px;
+    }
 }
 
 //my work page css
 .content.my-work {
-    overflow: auto;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-
     img {
         position: sticky;
         top: 50%;
@@ -36,8 +30,8 @@
     }
 
     .work-info {
-        margin-top: 50vh;
-        margin-bottom: 50vh;
+        margin-top: calc(50vh - 350px);
+        margin-bottom: calc(50vh - 150px);
         div {
             margin-top: 50px;
             margin-bottom: 50px;
