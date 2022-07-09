@@ -1,36 +1,56 @@
-let elementsAnimation = []
+//Will contain all works
+let workElements = []
 
 window.onload = function () {
-    elem.contentAboutMe.style.display = "block"
-    elem.contentMyWork.style.display = "block"
-    elementsAnimation = elem.myWorks.children
+    //Set block to contents (they start with none because of transitions scale bug)
+    elem.contentAboutMe.classList.add('smooth')
+    elem.contentMyWork.classList.add('smooth')
 
-    elem.workGif.onclick = function() { window.open(elementsAnimation[0].querySelector('input').value, '_blank') }
-    setInterval(() => {
-        readyForTransition = true
-    }, 1000);
+    //Get all works
+    workElements = elem.myWorks.children
+
+    //Store length globally
+    myWorksNum = workElements.length
 }
 
-function isVisible (ele) {
-    const { top, bottom } = ele.getBoundingClientRect();
+//Checks if work is visible
+function isVisible (work) {
+    const { top, bottom } = work.getBoundingClientRect();
     return ( Math.abs(((top + bottom) / 2) - (window.innerHeight / 2)) < 100)
 }
 
+//When scroll (Inside of my works)
+const audio = new Audio('img/audio.wav');
 myWorkScroll = () => {
-    for (let i = 0; i < elementsAnimation.length; i++) {
-        if (currAnimation != i && isVisible(elementsAnimation[i])) {
-            var audio = new Audio('img/audio.wav');
+    for (let i = 0; i < workElements.length; i++) {
+        //If visible
+        if (currAnimation != i && isVisible(workElements[i])) {
+            //Play audio
             audio.volume = 0.2;
             audio.play();
-            elementsAnimation[currAnimation].querySelector('p').classList.remove('show')
+
+            //Remove previous work style
+            workElements[currAnimation].querySelector('p').classList.remove('show')
+            elem["workGif" + currAnimation].style.display = "none"
+
+            //Update index
             currAnimation = i
-            elementsAnimation[i].querySelector('p').classList.add('show')
-            console.log(elementsAnimation[i].querySelector('input').value)
-            elem.workGif.src = elementsAnimation[i].querySelector('input').value
-            elem.workGif.onclick = function() { window.open(elementsAnimation[i].querySelector('input').value, '_blank') }
+
+            //Add new focused work style
+            workElements[i].querySelector('p').classList.add('show')
+            elem["workGif" + i].style.display = "block"
+            //Reset the gif to be able to watch it from the start
+            resetGif(elem["workGif" + i])   
             return
         }
     }
+}
+
+//Resets the gif img
+function resetGif(img) {
+    const imageUrl = img.src;
+    img.src = "";
+    img.src = imageUrl;
 }
 
 let currAnimation = 0

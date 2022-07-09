@@ -38,7 +38,8 @@ function ThroughDirectory(Directory, RootPath, isRecursion, keepExtension) {
 
   //Go through each file/folder
   fs.readdirSync(Directory).forEach(File => {
-      const Absolute = path.join(Directory, File).replaceAll(/\\/g, '/')  //Replace \\ to /
+      console.log(path.join(Directory, File))
+      const Absolute = path.join(Directory, File).replace(/\\/g, '/')  //Replace \\ to /
       //If it is a folder do recursion inside of this folder (to get the files inside it)
       if (fs.statSync(Absolute).isDirectory()) return ThroughDirectory(Absolute, RootPath, true, keepExtension)
       else {
@@ -107,6 +108,7 @@ function getAllPartialFiles() { //This function gets all partial Files
       partials = ThroughDirectoryFiles  //Store it
       console.log("Created partials")
     } catch (error) {
+      console.log(error)
       console.log("No partials added")
     }
   }

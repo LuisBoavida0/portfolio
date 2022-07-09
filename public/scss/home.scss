@@ -74,9 +74,12 @@
     padding: 50px;
     background-color: $secondary;
     transform: scale(0);
-    transition: all ease-in-out 1s;
     overflow: auto;
     
+    &.smooth {
+        transition: all ease-in-out 1s;
+    }
+
     &.show {
         transform: scale(1);
     }

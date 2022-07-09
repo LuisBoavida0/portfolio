@@ -1,11 +1,17 @@
-<div style="display: none;" class='content my-work' elemId="contentMyWork">
+<div class='content my-work' elemId="contentMyWork">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <h1>Here is some of my work:</h1>
       </div>
       <div class="col-6">
-        <img src="{{myWork.0.gif}}" alt="work gif" elemId="workGif">
+        {{#each myWork}}
+          {{#if @first}}
+            <img src="{{this.gif}}" alt="work gif" onclick="window.open('{{this.link}}', '_blank')" elemId="workGif{{@index}}">
+          {{else}}
+            <img src="{{this.gif}}" alt="work gif" style="display: none;" onclick="window.open('{{this.link}}', '_blank')" elemId="workGif{{@index}}">
+          {{/if}} 
+        {{/each}}
       </div>
       <div class="col-6 work-info" elemId="myWorks">
         {{#each myWork}}
@@ -24,7 +30,6 @@
                 {{/if}}
               </p>
             {{/if}}
-            <input type="hidden" value="{{this.gif}}">
           </div>
         {{/each}}
       </div>

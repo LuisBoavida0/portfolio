@@ -23,3 +23,4 @@ let eventsToUse = {} //List containing the events
 //------------ DECLARE GLOBAL IMPORTS VARIABLES HERE (THE IMPORT ITSELF IS IN globalImports.js) -------------------------
 let Handlebars = null //Handlebars
 let myWorkScroll = null
+let myWorksNum = 0

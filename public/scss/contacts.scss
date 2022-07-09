@@ -1,15 +1,39 @@
 //main page on contacts click (to give the zoom)
-/*.contents.contacts {
-    transform: scale(5) translate(-24%, 6%);
-}*/
+.contents.contacts {
+    transform: translate3d(17vw, 0, 100vw) rotateY(90deg);
+
+    .content-holder.contacts {
+        button {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        a {
+            pointer-events: all;
+        }
+    } 
+}
 
 //Main page contacts television css
 .content-holder.contacts {
     right: 27%;
     top: 31%;
     transform: rotateY(180deg);
+    width: 210px;
+    height: 230px;
+
+    button {
+        transition: all 1s;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     a {
+        pointer-events: none;
         position: absolute;
 
         &.linkedin {
@@ -22,8 +46,8 @@
         }
 
         &.npm {
-            top: 130px;
-            left: 66px;
+            top: 150px;
+            left: 56px;
         }
     }
 }
