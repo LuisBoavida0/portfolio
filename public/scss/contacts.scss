@@ -1,6 +1,6 @@
 //main page on contacts click (to give the zoom)
 .contents.contacts {
-    transform: translate3d(17vw, 0, 100vw) rotateY(90deg);
+    transform: translate3d(45px, 10px, 210px) rotateY(90deg);
 
     .content-holder.contacts {
         button {
@@ -16,11 +16,11 @@
 
 //Main page contacts television css
 .content-holder.contacts {
-    right: 27%;
+    right: 13%;
     top: 31%;
     transform: rotateY(180deg);
-    width: 210px;
-    height: 230px;
+    width: 60px;
+    height: 60px;
 
     button {
         transition: all 1s;
@@ -42,12 +42,14 @@
         }
 
         &.github {
-            left: 130px;
+            right: 0;
+            top: 0;
         }
 
         &.npm {
-            top: 150px;
-            left: 56px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }

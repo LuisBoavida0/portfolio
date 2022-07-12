@@ -5,39 +5,44 @@
 //main page parent div
 .contents {
     transition: all ease-in-out 2s;
+    width: 100%;
+    height: 100%;
+    position: relative;
     transform-style: preserve-3d;
-    height: 100vh;
 
     >div:not(.my-work) {
         position: absolute;
-        width: 100%;
-        height: 100vh;
+        width: 200px;
+        height: 200px;
     }
 
     >.roof {
         background-color: purple;
-        transform: rotateX( 90deg) translateZ(50vh);
+        transform: rotateX( 90deg) translateZ(100px);
     }
     >.floor {
         background-color: yellow;
-        transform: rotateX(-90deg) translateZ(50vh);
+        transform: rotateX(-90deg) translateZ(100px);
     }
     >.f-wall {
         background-color: red;
-        transform: translateZ(-50vh);
+        transform: translateZ(100px);
+        display: none;
+        /*&.w-smaller-than-h {
+            transform: translateZ(-50vw );
+        }*/
     }
     >.b-wall {
         background-color: grey;
-        transform: translateZ(50vh);
-        display: none;
+        transform: rotateY(180deg) translateZ(100px);
     }
     >.l-wall {
         background-color: blue;
-        transform: rotateY(-90deg) translateZ(50vw);
+        transform: rotateY(-90deg) translateZ(100px);
     }
     >.r-wall {
         background-color: green;
-        transform: rotateY( 90deg) translateZ(50vw);
+        transform: rotateY( 90deg) translateZ(100px);
     }
 }
 
@@ -47,19 +52,23 @@
     cursor: pointer;
         
     >h2 {
-        margin-bottom: 30px;
-        text-align: center;
+        font-size: 10px;
+        white-space: nowrap;
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
 
         >strong {
             position: absolute;
-            top: 33px;
+            top: 9px;
             left: calc(50% - 4px);
             animation: animatename 1s ease-in-out infinite;
-            font-size: 16px;
         }
     }
 
     >img {
+        width: 100%;
         margin: auto;
         display: block;
     }
@@ -87,12 +96,12 @@
 
 @keyframes animatename{
     0%{
-      transform: translateY(5px);
+      transform: translateY(2px);
     }
     50%{
-      transform: translateY(-5px);
+      transform: translateY(-2px);
     }
     100% {
-        transform: translateY(5px);
+        transform: translateY(2px);
     }
 }

@@ -1,13 +1,14 @@
 //main page on contents click (to give the zoom)
 .contents.about-me {
-    transform: translate3d(-13vw, 0, 120vw) rotateY(-90deg);
+    transform: translate3d(-50px, 10px, 200px) rotateY(-90deg);
 }
 
 //Main page about me frame css
 .content-holder.about-me {
-    left: 32%;
-    top: 40%;
+    left: 30px;
+    top: 80px;
     transform: rotateY(180deg);
+    width: 40px;
 }
 
 //About me page css

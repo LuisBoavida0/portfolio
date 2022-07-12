@@ -1,16 +1,17 @@
 //main page on my work click (to give the zoom)
 .contents.my-work {
-    transform: scale(5) translate(0, -140px);
+    transform: translate3d(0, -36px, 200px);
 }
 
 //Main page my work desk css
 .content-holder.my-work {
     left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
+    bottom: -4px;
+    transform: translateX(-50%) translateZ(-29px);
+    width: 120px;
 
     h2 {
-        margin-bottom: -30px;
+        top: -10px;
     }
 }
 

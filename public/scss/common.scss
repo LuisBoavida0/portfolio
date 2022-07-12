@@ -15,7 +15,14 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
-body {
+.root {
     overflow: hidden;
-    perspective: 100vw;
+    width: 200px;
+    height: 200px;
+    perspective: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 1s;
+    transform: translate(-50%, -50%) scale(4);
 }

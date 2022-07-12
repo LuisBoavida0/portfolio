@@ -13,10 +13,20 @@ window.onload = function () {
     myWorksNum = workElements.length
 }
 
+window.onresize = function () {
+    console.log(window.innerHeight - window.innerWidth)
+
+    //If width is smaller than height, add class to fix f-wall size
+    if (window.innerHeight > window.innerWidth)
+        elem.fWall.classList.add('w-smaller-than-h')
+    else //If width bigger
+        elem.fWall.classList.remove('w-smaller-than-h')
+}
+
 //Checks if work is visible
-function isVisible (work) {
+function isVisible(work) {
     const { top, bottom } = work.getBoundingClientRect();
-    return ( Math.abs(((top + bottom) / 2) - (window.innerHeight / 2)) < 100)
+    return (Math.abs(((top + bottom) / 2) - (window.innerHeight / 2)) < 100)
 }
 
 //When scroll (Inside of my works)
@@ -40,7 +50,7 @@ myWorkScroll = () => {
             workElements[i].querySelector('p').classList.add('show')
             elem["workGif" + i].style.display = "block"
             //Reset the gif to be able to watch it from the start
-            resetGif(elem["workGif" + i])   
+            resetGif(elem["workGif" + i])
             return
         }
     }

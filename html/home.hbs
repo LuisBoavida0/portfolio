@@ -3,27 +3,31 @@
 
 {{! Add header}}
 {{> header }}
-<div class="contents" elemId="contentsDiv">
-  <div class="roof"></div>
-  <div class="floor"></div>
-  <div class="f-wall">
-  </div>
-  <div class="b-wall">
-  </div>
-  <div class="l-wall">
-    <div class='content-holder about-me' elemId="aboutMeDiv">
-      <h2>About Me! <strong>v</strong></h2>
-      <img src="img/frame.png" width="100">
+<div class="root">
+  <div class="contents" elemId="contentsDiv">
+    <div class="roof"></div>
+    <div class="floor"></div>
+    <div class="f-wall" elemId="fWall"></div>
+    <script>
+      if (window.innerHeight > window.innerWidth) //If width smaller add class
+        document.getElementsByClassName('f-wall')[0].classList.add('w-smaller-than-h')
+    </script>
+    <div class="b-wall"></div>
+    <div class="l-wall">
+      <div class='content-holder about-me' elemId="aboutMeDiv">
+        <h2>About Me! <strong>v</strong></h2>
+        <img src="img/frame.png">
+      </div>
     </div>
-  </div>
-  <div class="r-wall">
-    <div class='content-holder contacts' elemId="contactsDiv">
-      {{> contacts }}
+    <div class="r-wall">
+      <div class='content-holder contacts' elemId="contactsDiv">
+        {{> contacts }}
+      </div>
     </div>
-  </div>
-  <div class='content-holder my-work' elemId="myWorkDiv">
-    <h2>My work! <strong>v</strong></h2>
-    <img src="img/desk.png" width="500">
+    <div class='content-holder my-work' elemId="myWorkDiv">
+      <h2>My work! <strong>v</strong></h2>
+      <img src="img/desk.png">
+    </div>
   </div>
 </div>
 
