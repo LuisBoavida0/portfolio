@@ -11,6 +11,16 @@ window.onload = function () {
 
     //Store length globally
     myWorksNum = workElements.length
+
+    //Fit text
+    /*window.fitText(elem.aboutMeDivText)
+    window.fitText(elem.myWorkDivText)*/
+
+    //If width is smaller than height, add class to fix f-wall size
+    if (window.innerHeight > window.innerWidth)
+        document.getElementsByTagName('body')[0].classList.add('width-smaller')
+    else //If width bigger
+        document.getElementsByTagName('body')[0].classList.remove('width-smaller')
 }
 
 window.onresize = function () {
@@ -18,9 +28,12 @@ window.onresize = function () {
 
     //If width is smaller than height, add class to fix f-wall size
     if (window.innerHeight > window.innerWidth)
-        elem.fWall.classList.add('w-smaller-than-h')
+        document.getElementsByTagName('body')[0].classList.add('width-smaller')
     else //If width bigger
-        elem.fWall.classList.remove('w-smaller-than-h')
+        document.getElementsByTagName('body')[0].classList.remove('width-smaller')
+
+    /*window.fitText(elem.aboutMeDivText)
+    window.fitText(elem.myWorkDivText)*/
 }
 
 //Checks if work is visible

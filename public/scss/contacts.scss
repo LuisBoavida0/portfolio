@@ -1,6 +1,6 @@
 //main page on contacts click (to give the zoom)
 .contents.contacts {
-    transform: translate3d(45px, 10px, 210px) rotateY(90deg);
+    transform: translate3d(22vh, 4vh, 112vh) rotateY(90deg);
 
     .content-holder.contacts {
         button {
@@ -14,13 +14,17 @@
     } 
 }
 
+.width-smaller .contents.contacts {
+    transform: translate3d(22vw, 4vw, 112vw) rotateY(90deg);
+}
+
 //Main page contacts television css
 .content-holder.contacts {
     right: 13%;
     top: 31%;
     transform: rotateY(180deg);
-    width: 60px;
-    height: 60px;
+    width: 30%;
+    height: 30%;
 
     button {
         transition: all 1s;
@@ -35,6 +39,7 @@
     a {
         pointer-events: none;
         position: absolute;
+        width: 40%;
 
         &.linkedin {
             left: 0;
