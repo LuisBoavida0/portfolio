@@ -5,31 +5,43 @@
 {{> header }}
 <div class="root">
   <div class="contents" elemId="contentsDiv">
-    <div class="roof"></div>
-    <div class="floor"></div>
-    <div class="f-wall" elemId="fWall"></div>
+    <div class="face roof"></div>
+    <div class="face floor"></div>
+    <div class="face f-wall" elemId="fWall"></div>
     <script>
       if (window.innerHeight > window.innerWidth) //If width smaller add class
         document.getElementsByClassName('f-wall')[0].classList.add('w-smaller-than-h')
     </script>
-    <div class="b-wall"></div>
-    <div class="l-wall">
+    <div class="face b-wall"></div>
+    <div class="face l-wall">
       <div class='content-holder about-me' elemId="aboutMeDiv">
         <img class="text-svg" src="img/about-me-text.svg">
         <img class="down-arrow" src="img/down-arrow.svg" alt="down arrow">
         <img class="image-holder" src="img/frame.png">
       </div>
     </div>
-    <div class="r-wall">
+    <div class="face r-wall">
       <div class='content-holder contacts' elemId="contactsDiv">
         {{> contacts }}
       </div>
     </div>
-    <div class='content-holder my-work' elemId="myWorkDiv">
+    
+    {{!-- <div class='content-holder my-work' elemId="myWorkDiv">
       <img class="text-svg" src="img/my-work-text.svg">
       <img class="down-arrow" src="img/down-arrow.svg" alt="down arrow">
       <img class="image-holder" src="img/desk.png">
-    </div>
+    </div> --}}
+
+    {{!-- DESK 3D --}}
+    <img src="img/3dDesk/front.png"  elemId="myWorkDiv" class="face2 front">
+    <img src="img/3dDesk/back.png" class="face2 back">
+    <img src="img/3dDesk/left.png" class="face2 right">
+    <img src="img/3dDesk/left.png" class="face2 left">
+    <img src="img/3dDesk/top.png" class="face2 top">
+    <img src="img/3dDesk/interior.png" class="face2 interior-left">
+    <img src="img/3dDesk/interior.png" class="face2 interior-right">
+    <img src="img/3dDesk/iMac.png" class="face2 i-mac">
+    {{!-- END DESK 3D --}}
   </div>
 </div>
 

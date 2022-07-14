@@ -1,6 +1,7 @@
 @import './about-me.scss';
 @import './my-work.scss';
 @import './contacts.scss';
+@import './3dDesk.scss';
 
 :root {
     --size: 100vh;
@@ -18,7 +19,7 @@
     position: relative;
     transform-style: preserve-3d;
 
-    >div:not(.my-work) {
+    >.face {
         position: absolute;
         width: var(--size);
         height: var(--size);

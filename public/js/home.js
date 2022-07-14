@@ -49,5 +49,4 @@ function returnFromContent(e, target, targetClass) {
     else setTimeout(() => { elem.contentsDiv.classList.remove(targetClass) }, 100)
 }
 
-//import './fitText'
 import './homeScrollAnimations'

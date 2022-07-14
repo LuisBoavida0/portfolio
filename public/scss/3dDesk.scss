@@ -1,0 +1,83 @@
+
+:root {
+    --desk-width: 50vh;
+    --desk-height: 20vh;
+    --interior-left-alignment: -5vh;
+
+    --desk-half-width: calc(var(--desk-width) / 2);
+    --desk-half-height: calc(var(--desk-height) / 2);
+    
+    --desk-alignment: calc(var(--desk-width) - var(--desk-half-height));
+    --desk-negative-alignment: calc(0px - var(--desk-alignment));  
+
+    --desk-front: calc(0px - (var(--desk-width) - var(--desk-height)));
+}
+
+.width-smaller {
+    --desk-width: 50vw;
+    --desk-height: 20vw;
+    --interior-left-alignment: -5vw;
+    --desk-half-width: calc(var(--desk-width) / 2);
+    --desk-half-height: calc(var(--desk-height) / 2);
+    
+    --desk-alignment: calc(var(--desk-width) - var(--desk-half-height));
+    --desk-negative-alignment: calc(0px - var(--desk-alignment));  
+
+    --desk-front: calc(0px - (var(--desk-width) - var(--desk-height)));
+
+    .face2.i-mac {
+        left: 39vw;
+        width: 23vw;
+        height: 18vw;
+        bottom: 20vw;
+        transform: translateZ(-45vw);
+    }
+}
+
+.face2 {
+    position: absolute;
+    width: var(--desk-width);
+    height: var(--desk-height);
+    bottom: 0;
+    left: var(--desk-half-width);
+
+    &.front {
+        transform: rotateY(0deg) translateZ(var(--desk-front));
+    }
+
+    &.back {
+        transform: rotateY(180deg) translateZ(var(--desk-width));
+    }
+
+    &.right {
+        width: var(--desk-height);
+        transform: rotateY(90deg) translateZ(var(--desk-alignment)) translateX(var(--desk-alignment));
+    }
+
+    &.left {
+        width: var(--desk-height);
+        transform: rotateY(-90deg) translateZ(var(--desk-half-height)) translateX(var(--desk-negative-alignment));
+    }
+
+    &.top {
+        transform: rotateX(90deg) translateZ(var(--desk-half-height)) translateY(var(--desk-negative-alignment));
+    }
+
+    &.interior-left {
+        width: var(--desk-height);
+        transform: rotateY(-90deg) translateZ(var(--interior-left-alignment)) translateX(var(--desk-negative-alignment));
+    }
+
+    &.interior-right {
+        width: var(--desk-height);
+        transform: rotateY(90deg) translateZ(var(--desk-half-width)) translateX(var(--desk-alignment));
+    }
+
+    &.i-mac {
+        left: 39vh;
+        width: 23vh;
+        height: 18vh;
+        bottom: 20vh;
+        transform: translateZ(-45vh);
+    }
+}
